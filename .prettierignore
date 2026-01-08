@@ -1,0 +1,11 @@
+/dist/*
+/build/*
+.local
+.output.js
+.tailwind.config.js
+/node_modules/**
+
+**/*.svg
+**/*.sh
+
+/public/*

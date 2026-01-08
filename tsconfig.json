@@ -1,0 +1,14 @@
+{
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "baseUrl": ".",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src", "src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.d.ts"]
+}

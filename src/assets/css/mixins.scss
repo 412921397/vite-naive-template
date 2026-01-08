@@ -1,0 +1,41 @@
+/* 和 tailwind.config.js 保持一致 */
+$break-mobile: 375px;
+$break-tablet: 768px;
+$break-desktop: 1280px;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin text-ellipsis($line: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @if $line == 1 {
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$break-tablet - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $break-tablet) and (max-width: #{$break-desktop - 1}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $break-desktop) {
+    @content;
+  }
+}
