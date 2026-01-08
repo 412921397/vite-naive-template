@@ -1,9 +1,12 @@
 import * as echarts from "echarts";
 
-export default function (el: HTMLElement) {
-  const echartInstance = echarts.init(el, null, { renderer: "svg" });
+import chinaMapData from "../data/china.json";
 
-  /** 传入相应的地图options配置 */
+echarts.registerMap("china", chinaMapData);
+
+export default function (el: HTMLElement) {
+  const echartInstance = echarts.init(el);
+
   const setOptions = (options: echarts.EChartsOption) => {
     echartInstance.setOption(options);
   };

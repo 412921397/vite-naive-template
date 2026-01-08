@@ -14,7 +14,7 @@ const lightThemeOverrides = {
     primaryColor: "#000000"
   },
   Button: {
-    textColor: "#FF0000"
+    // textColor: "#FF0000"
   }
 };
 
@@ -23,7 +23,7 @@ const darkThemeOverrides = {
     primaryColor: "#ffffff"
   },
   Button: {
-    textColor: "#FF0000"
+    // textColor: "#FF0000"
   }
 };
 

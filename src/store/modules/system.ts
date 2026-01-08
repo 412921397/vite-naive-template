@@ -1,10 +1,11 @@
 import { defineStore } from "pinia";
 
 const useSystemStore = defineStore("system", {
-  persist: true, // state 持久化
+  persist: false, // state 持久化
   state: () => ({
     theme: localStorage.getItem("theme") || "light",
-    lang: localStorage.getItem("lang") || "zh_CN"
+    lang: localStorage.getItem("lang") || "zh_CN",
+    count: 0
   }),
   actions: {
     setTheme(val: string) {
@@ -14,6 +15,9 @@ const useSystemStore = defineStore("system", {
     setLangAction(val: string) {
       this.lang = val;
       localStorage.setItem("lang", val);
+    },
+    setCount() {
+      this.count += 1;
     }
   }
 });

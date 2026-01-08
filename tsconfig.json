@@ -6,6 +6,8 @@
     "baseUrl": ".",
     "noImplicitAny": true,
     "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "paths": {
       "@/*": ["src/*"]
     }

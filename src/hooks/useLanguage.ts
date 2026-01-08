@@ -1,4 +1,4 @@
-import useSystem from "@/store";
+import { useSystem } from "@/store";
 
 function useLanguage() {
   const { setLangAction } = useSystem();

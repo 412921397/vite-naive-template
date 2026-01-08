@@ -3,7 +3,7 @@ import type { App } from "vue";
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 import { createPinia } from "pinia";
 
-import useSystem from "./modules/system.ts";
+import useSystem from "./modules/system";
 
 const store = createPinia();
 store.use(piniaPluginPersistedstate);
