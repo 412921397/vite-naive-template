@@ -12,7 +12,7 @@ const { count } = storeToRefs(system);
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="system.setCount">count is {{ count }}</button>
+    <button class="text-[#fff]" type="button" @click="system.setCount">count is {{ count }}</button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code>

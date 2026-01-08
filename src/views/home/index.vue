@@ -10,6 +10,8 @@
       </a>
     </div>
 
+    <div class="default-transition my-5 text-[#f00] desktop:text-[green] text-xl font-bold">响应式的样式</div>
+
     <n-button class="mt-[30px]" type="success" @click="toggleDark">主题切换</n-button>
     <home msg="Vite + Vue" />
   </div>

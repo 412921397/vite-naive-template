@@ -2,18 +2,20 @@
 import { computed } from "vue";
 import { NConfigProvider, NSpace, darkTheme } from "naive-ui";
 import { dateZhCN } from "naive-ui";
+import { storeToRefs } from "pinia";
 
-import { useDarkMode } from "@/hooks";
+import { useSystem } from "@/store";
 import { lightThemeOverrides, darkThemeOverrides } from "@/utils/themeOverrides";
 
-const { isDark } = useDarkMode();
+const system = useSystem();
+const { theme: thmemMode } = storeToRefs(system);
 
-const themeClass = computed(() => (isDark.value ? "theme-dark" : "theme-light"));
-const theme = computed(() => (isDark.value ? darkTheme : null));
+const themeClass = computed(() => (thmemMode.value === "dark" ? "theme-dark" : "theme-light"));
+const theme = computed(() => (thmemMode.value === "dark" ? darkTheme : null));
 </script>
 
 <template>
-  <div id="app" :class="themeClass" class="default-transition">
+  <div :class="themeClass" class="default-transition">
     <n-config-provider
       preflight-style-disabled
       :theme="theme"

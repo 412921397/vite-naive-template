@@ -1,0 +1,16 @@
+{
+  "tailwindCSS.includeLanguages": {
+    "vue": "html",
+    "scss": "css"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["class=\"([^\"]*)\"", "class='([^']*)'", "class=\\s*([^\\s>]*)"],
+    // 如果你使用 `:class` 绑定，可以加上下面这行
+    ["::class\\s*\\(\\s*['\"`]([^'\"]*)['\"`]"]
+  ],
+  // 新增：明确告诉扩展配置文件的路径
+  "tailwindCSS.configFile": "./tailwind.config.js"
+}

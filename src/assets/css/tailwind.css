@@ -1,5 +1,9 @@
 @import url("normalize.css");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  /* 方法A：直接定义新的断点 */
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 992px;
+}

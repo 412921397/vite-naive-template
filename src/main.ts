@@ -6,9 +6,9 @@ import router from "./router";
 import App from "./App.vue";
 
 import "./style.css";
-import "normalize.css";
-import "@/assets/css/index.scss";
+
 import "@/assets/css/tailwind.css";
+import "@/assets/css/index.scss";
 
 const app = createApp(App);
 app.use(store);

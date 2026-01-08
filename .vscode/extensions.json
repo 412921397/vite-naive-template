@@ -1,21 +1,3 @@
 {
-  "recommendations": ["Vue.volar"],
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "stylelint.validate": ["css", "scss", "postcss", "vue"],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": true
-  },
-  "tailwindCSS.includeLanguages": {
-    "vue": "html",
-    "typescript": "javascript",
-    "typescriptreact": "javascript",
-    "scss": "css"
-  },
-  "tailwindCSS.experimental.classRegex": [
-    ["class\\s*=\\s*\"([^\"]*)\"", "[^\\s]+"],
-    ["class:\\s*'([^']*)'", "[^\\s]+"]
-  ]
+  "recommendations": ["Vue.volar", "bradlc.vscode-tailwindcss", "dbaeumer.vscode-eslint", "stylelint.vscode-stylelint"]
 }

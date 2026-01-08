@@ -1,6 +1,7 @@
 {
   "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
   "compilerOptions": {
+    "types": ["@unocss/preset-mini/types"],
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "baseUrl": ".",

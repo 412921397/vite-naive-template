@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 
 const useSystemStore = defineStore("system", {
-  persist: false, // state 持久化
+  persist: true, // state 持久化
   state: () => ({
     theme: localStorage.getItem("theme") || "light",
     lang: localStorage.getItem("lang") || "zh_CN",
