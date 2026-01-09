@@ -26,17 +26,15 @@ const theme = computed(() => (thmemMode.value === "dark" ? darkTheme : null));
         <n-dialog-provider>
           <n-notification-provider>
             <n-space vertical>
-              <div class="content relative">
-                <div class="mx-auto mb-38 relative top-[120px] desktop:w-[1200px] px-4">
-                  <router-view v-slot="{ Component, route }">
-                    <transition name="fade">
-                      <KeepAlive v-if="route.meta.keepAlive">
-                        <component :is="Component" />
-                      </KeepAlive>
-                      <component v-else :is="Component" :key="route.fullPath" />
-                    </transition>
-                  </router-view>
-                </div>
+              <div>
+                <router-view v-slot="{ Component, route }">
+                  <transition name="fade">
+                    <KeepAlive v-if="route.meta.keepAlive">
+                      <component :is="Component" />
+                    </KeepAlive>
+                    <component v-else :is="Component" :key="route.fullPath" />
+                  </transition>
+                </router-view>
               </div>
             </n-space>
           </n-notification-provider>
