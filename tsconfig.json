@@ -1,6 +1,9 @@
 {
-  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
+  "references": [{ "path": "./tsconfig.app.json" }],
   "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler", // 这是关键！使用 "bundler" 而不是 "node"
     "types": ["@unocss/preset-mini/types"],
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -11,7 +14,19 @@
     "allowSyntheticDefaultImports": true,
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    // Vue 3 必需配置
+    "jsx": "preserve",
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "useDefineForClassFields": true
   },
-  "include": ["src", "src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.d.ts"]
+  "include": ["src", "src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.d.ts"],
+  "exclude": ["node_modules", "dist"]
 }
