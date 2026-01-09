@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col justify-center items-center mt-35">
     <div class="w-full flex flex-row items-center justify-center gap-4!">
       <a class="mr-[30px]!" href="https://vite.dev" target="_blank">
         <img src="/vite.svg" class="logo" alt="Vite logo" />
